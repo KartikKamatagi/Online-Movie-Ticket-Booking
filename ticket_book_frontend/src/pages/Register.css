@@ -1,0 +1,124 @@
+:root {
+  --primary-blue: #1e62d0;
+  --primary-blue-dark: #1148a3;
+  --bg-dark: #081225;
+  --card-dark: #0f1b33;
+  --text-main: #f5f8ff;
+  --text-muted: #b8c6de;
+  --border-soft: #2d3f62;
+}
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  position: relative;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(30, 98, 208, 0.22), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(17, 72, 163, 0.22), transparent 45%),
+    var(--bg-dark);
+}
+
+.register-backdrop {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.register-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(15, 27, 51, 0.92), rgba(9, 19, 37, 0.92));
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  color: var(--text-main);
+}
+
+.register-brand {
+  color: #9bc2ff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.register-card h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.register-subtitle {
+  margin: 0 0 8px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.register-card label {
+  font-size: 0.9rem;
+  color: #d4def0;
+}
+
+.register-card input {
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+}
+
+.register-card input::placeholder {
+  color: #8fa3c5;
+}
+
+.register-card input:focus {
+  outline: none;
+  border-color: #4d86e5;
+  box-shadow: 0 0 0 3px rgba(30, 98, 208, 0.2);
+}
+
+.register-card button {
+  margin-top: 8px;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 14px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.register-card button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.register-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-login-text {
+  margin: 4px 0 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.register-login-text a {
+  color: #9bc2ff;
+  text-decoration: none;
+}
+
+.register-login-text a:hover {
+  text-decoration: underline;
+}

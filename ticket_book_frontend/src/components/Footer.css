@@ -1,0 +1,112 @@
+.site-footer {
+  margin-top: 30px;
+  border-top: 1px solid #26364d;
+  background: linear-gradient(180deg, #0d1524 0%, #090f19 100%);
+  color: #d6e2f3;
+}
+
+.footer-main {
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  padding: 30px 0 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.footer-col h4,
+.footer-brand {
+  margin: 0 0 10px;
+  color: #f2f7ff;
+  font-size: 1.02rem;
+}
+
+.footer-brand {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.footer-text {
+  margin: 0;
+  color: #a8bbd6;
+  line-height: 1.7;
+  font-size: 0.92rem;
+  max-width: 320px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #c6d8f2;
+  text-decoration: none;
+  width: fit-content;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #56a1ff;
+  transform: translateX(2px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #33507a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #132138;
+  color: #d8e7fb;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-2px);
+  border-color: #56a1ff;
+  background: #173255;
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #26364d;
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  padding: 12px 0 16px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #95aac7;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-top: 24px;
+  }
+}

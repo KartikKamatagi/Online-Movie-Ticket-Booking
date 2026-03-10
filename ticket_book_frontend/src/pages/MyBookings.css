@@ -1,0 +1,218 @@
+.my-bookings-page .page {
+  background:
+    radial-gradient(circle at 18% 15%, rgba(46, 133, 232, 0.16), transparent 34%),
+    radial-gradient(circle at 84% 8%, rgba(12, 47, 99, 0.32), transparent 34%),
+    linear-gradient(180deg, #0d1524 0%, #0a111c 52%, #070b12 100%);
+}
+
+.my-bookings-layout {
+  align-items: flex-start;
+  padding-top: 28px;
+}
+
+.my-bookings-shell.dashboard-shell {
+  background: linear-gradient(180deg, #141d2a 0%, #0f1723 100%);
+  border: 1px solid #273345;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+  padding: 16px;
+}
+
+.bookings-main {
+  border: 1px solid #273345;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #141d2a, #111a28);
+  padding: 16px;
+}
+
+.bookings-kicker {
+  margin: 0;
+  color: #9dc3ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+.my-bookings-header h2 {
+  margin: 4px 0;
+  color: #f3f7ff;
+}
+
+.bookings-count {
+  margin: 0;
+  color: #b3c0d4;
+}
+
+.bookings-filter-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bookings-filter-wrap label {
+  color: #b3c0d4;
+  font-size: 12px;
+}
+
+.bookings-filter-wrap select {
+  border-radius: 10px;
+  border: 1px solid #2c3f5c;
+  background: #121c2b;
+  color: #d7e2f4;
+  padding: 9px 10px;
+}
+
+.my-bookings-empty {
+  margin: 12px 0 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #26364d;
+  color: #d8e3f3;
+}
+
+.my-bookings-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.my-bookings-card.ticket-card {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: stretch;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px solid #273345;
+  background: linear-gradient(180deg, #151d2a, #101722);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  color: #d7e2f4;
+  padding: 12px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.my-bookings-card.ticket-card:hover {
+  transform: translateY(-4px);
+  border-color: #41618d;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+
+.ticket-poster {
+  width: 100%;
+  height: 124px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #334459;
+}
+
+.ticket-middle h3 {
+  margin: 0 0 6px;
+  color: #f6f9ff;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.ticket-middle p {
+  margin: 5px 0;
+  color: #b3c0d4;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.ticket-right {
+  grid-column: 1 / -1;
+  border-top: 1px dashed #355277;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ticket-amount {
+  margin: 0;
+  color: #f6f9ff;
+  font-weight: 700;
+}
+
+.status-badge {
+  width: fit-content;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 5px 10px;
+}
+
+.status-badge.success {
+  background: #1f5d38;
+  color: #c8f9d8;
+}
+
+.status-badge.pending {
+  background: #6a5216;
+  color: #ffe9ac;
+}
+
+.status-badge.cancelled {
+  background: #652a2a;
+  color: #ffd1d1;
+}
+
+.view-ticket-btn {
+  border-radius: 999px;
+  border: 0;
+  background: linear-gradient(135deg, #2f7fe9, #2059b2);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 9px 12px;
+}
+
+.ticket-middle {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .my-bookings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .my-bookings-layout {
+    padding-top: 16px;
+  }
+
+  .my-bookings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bookings-filter-wrap {
+    width: 100%;
+  }
+
+  .bookings-filter-wrap select {
+    width: 100%;
+  }
+
+  .my-bookings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-bookings-card.ticket-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-poster {
+    height: 180px;
+  }
+
+  .ticket-right {
+    border-top: 1px dashed #355277;
+    padding-top: 10px;
+    justify-content: flex-start;
+  }
+}

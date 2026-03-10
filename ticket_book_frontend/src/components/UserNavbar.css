@@ -1,0 +1,95 @@
+.user-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 20px;
+  background: rgba(10, 10, 12, 0.92);
+  border-bottom: 1px solid rgba(215, 38, 61, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.user-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.user-nav-logo {
+  width: 192px;
+  height: 46px;
+  display: block;
+}
+
+.user-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-nav-links button,
+.user-nav-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #f6e8c7;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.user-nav-links button:hover {
+  background: rgba(215, 38, 61, 0.18);
+  color: #ffd27a;
+}
+
+.user-nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.user-nav-primary {
+  background: linear-gradient(135deg, #d7263d, #9b1125) !important;
+  color: #fff4dc !important;
+}
+
+.user-nav-ghost {
+  border: 1px solid rgba(224, 173, 62, 0.6) !important;
+}
+
+.user-nav-ghost:hover {
+  background: rgba(224, 173, 62, 0.12);
+}
+
+@media (max-width: 900px) {
+  .user-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .user-nav-brand,
+  .user-nav-links,
+  .user-nav-actions {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .user-nav-links {
+    flex-wrap: wrap;
+  }
+
+  .user-nav-logo {
+    width: 170px;
+    height: 40px;
+  }
+}

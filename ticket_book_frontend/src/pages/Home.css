@@ -4,6 +4,11 @@
   --blue-700: #1654a3;
   --blue-600: #1b6ad0;
   --blue-500: #2e85e8;
+  --blue-400: #5ba3f5;
+  --purple-600: #7c3aed;
+  --purple-500: #a855f7;
+  --pink-500: #ec4899;
+  --cyan-500: #06b6d4;
   --gray-950: #0a0f18;
   --gray-800: #1f2937;
   --gray-700: #3a4454;
@@ -17,9 +22,24 @@
 
 .home-page {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #1a2435 0%, #0c111a 45%, #070b12 100%);
+  background: linear-gradient(135deg, #0f0f23 0%, #1a0f35 25%, #0d1f35 50%, #0f2a3f 75%, #050f1f 100%);
   color: #e8edf7;
   padding-bottom: 42px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .home-toolbar {

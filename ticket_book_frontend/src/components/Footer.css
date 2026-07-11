@@ -81,6 +81,7 @@
   border-color: #56a1ff;
   background: #173255;
   color: #ffffff;
+  box-shadow: 0 6px 16px rgba(86, 161, 255, 0.25);
 }
 
 .footer-bottom {

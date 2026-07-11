@@ -44,11 +44,12 @@ button {
   border: 0;
   color: white;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
   transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(11, 103, 182, 0.25);
 }
 
 button:disabled {
